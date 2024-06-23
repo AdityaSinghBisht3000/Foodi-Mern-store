@@ -21,31 +21,31 @@ const Banner = () => {
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-orange-500 mask mask-star-2"
+                    className="bg-yellow-500 mask mask-star-2"
                     readOnly
                   />
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-orange-500 mask mask-star-2"
+                    className="bg-yellow-500 mask mask-star-2"
                     readOnly
                   />
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-orange-500 mask mask-star-2"
+                    className="bg-yellow-500 mask mask-star-2"
                     checked
                     readOnly
                   />
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-yellow-400 mask mask-star-2"
                   />
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-yellow-400 mask mask-star-2"
                     readOnly
                   />
                 </div>
@@ -64,32 +64,32 @@ const Banner = () => {
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-orange-500 mask mask-star-2"
+                    className="bg-yellow-500 mask mask-star-2"
                     readOnly
                   />
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-orange-500 mask mask-star-2"
+                    className="bg-yellow-500 mask mask-star-2"
                     readOnly
                   />
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-orange-500 mask mask-star-2"
+                    className="bg-yellow-500 mask mask-star-2"
                     checked
                     readOnly
                   />
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-yellow-400 mask mask-star-2"
                     readOnly
                   />
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-yellow-400 mask mask-star-2"
                     readOnly
                   />
                 </div>
