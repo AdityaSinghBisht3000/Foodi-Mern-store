@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../public/logo.png";
+import logo from "/logo.png";
 import { FaRegUser } from "react-icons/fa";
 const Navbar = () => {
   const [isSticky, setSticky] = useState(false);
@@ -71,7 +71,7 @@ const Navbar = () => {
       <div
         className={`navbar xl:px-24 ${
           isSticky
-            ? "shadow-md bg-base-100 transition-all duration-300 ease-in-out"
+            ? "shadow-md bg-gray-50 transition-all duration-300 ease-in-out"
             : ""
         }`}
       >
