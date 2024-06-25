@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import logo from "/logo.png";
+
 import { FaRegUser } from "react-icons/fa";
+import Modal from "./Modal";
 const Navbar = () => {
   const [isSticky, setSticky] = useState(false);
 
@@ -161,7 +163,7 @@ const Navbar = () => {
             </button>
           }
 
-          {/* <Modal /> */}
+          <Modal />
         </div>
       </div>
     </header>

@@ -146,14 +146,14 @@ const Menu = () => {
 
           {/* filter options */}
           <div className="flex justify-end mb-4 rounded-sm">
-            <div className="p-2 bg-black ">
+            <div className="p-2 bg-green ">
               <FaFilter className="w-4 h-4 text-white" />
             </div>
             <select
               id="sort"
               onChange={(e) => handleSortChange(e.target.value)}
               value={sortOption}
-              className="px-2 py-1 text-white bg-black rounded-sm"
+              className="px-2 py-1 bg-white border-2 rounded-sm text-green"
             >
               <option value="default"> Default</option>
               <option value="A-Z">A-Z</option>
