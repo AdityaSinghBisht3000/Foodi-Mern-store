@@ -1,14 +1,19 @@
 import React, { useContext, useState } from "react";
 import { FaFacebookF, FaGithub, FaGoogle } from "react-icons/fa";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-// import { useForm } from "react-hook-form";
+import {
+  Link,
+  useFormAction,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
+import { useForm } from "react-hook-form";
 // import { AuthContext } from "../contexts/AuthProvider";
 const Modal = () => {
-  //   const {
-  //     register,
-  //     handleSubmit,
-  //     formState: { errors },
-  //   } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   //   const { signUpWithGmail, login } = useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState("");
@@ -21,29 +26,29 @@ const Modal = () => {
   const onSubmit = (data) => {
     const email = data.email;
     const password = data.password;
-    // console.log(email, password)
-    login(email, password)
-      .then((result) => {
-        const user = result.user;
-        alert("Login successfull");
-        document.getElementById("my_modal_5").close();
-        navigate(from, { replace: true });
-      })
-      .catch((error) => {
-        const errorMessage = error.message;
-        setErrorMessage("Provide a correct email and password!");
-      });
+    // console.log(email, password);
+    // login(email, password)
+    //   .then((result) => {
+    //     const user = result.user;
+    //     alert("Login successfull");
+    //     document.getElementById("my_modal_5").close();
+    //     navigate(from, { replace: true });
+    //   })
+    //   .catch((error) => {
+    //     const errorMessage = error.message;
+    //     setErrorMessage("Provide a correct email and password!");
+    //   });
   };
 
   // google signin
   const handleLogin = () => {
-    signUpWithGmail()
-      .then((result) => {
-        const user = result.user;
-        alert("Login successfull!");
-        navigate(from, { replace: true });
-      })
-      .catch((error) => console.log(error));
+    // signUpWithGmail()
+    //   .then((result) => {
+    //     const user = result.user;
+    //     alert("Login successfull!");
+    //     navigate(from, { replace: true });
+    //   })
+    //   .catch((error) => console.log(error));
   };
   return (
     <dialog
@@ -53,7 +58,7 @@ const Modal = () => {
       <div className=" modal-box">
         <div className="flex flex-col justify-center mt-0 modal-action">
           <form
-            // onSubmit={handleSubmit(onSubmit)}
+            onSubmit={handleSubmit(onSubmit)}
             className="card-body"
             method="dialog"
           >
@@ -68,7 +73,7 @@ const Modal = () => {
                 type="email"
                 placeholder="email"
                 className="input input-bordered"
-                // {...register("email")}
+                {...register("email")}
               />
             </div>
 
@@ -81,7 +86,7 @@ const Modal = () => {
                 type="password"
                 placeholder="password"
                 className="input input-bordered"
-                // {...register("password")}
+                {...register("password")}
               />
               <label className="mt-1 label">
                 <a href="#" className="label-text-alt link link-hover">
