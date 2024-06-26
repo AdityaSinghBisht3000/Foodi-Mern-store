@@ -1,14 +1,9 @@
 import React, { useContext, useState } from "react";
 import { FaFacebookF, FaGithub, FaGoogle } from "react-icons/fa";
-import {
-  Link,
-  useFormAction,
-  useLocation,
-  useNavigate,
-} from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { AuthContext } from "../context/AuthProvider";
-// import { AuthContext } from "../contexts/AuthProvider";
+import { AuthContext } from "../contexts/AuthProvider";
+
 const Modal = () => {
   const {
     register,
@@ -52,11 +47,8 @@ const Modal = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <dialog
-      id="my_modal_5"
-      className="bg-white-500 modal modal-middle sm:modal-middle"
-    >
-      <div className=" modal-box">
+    <dialog id="my_modal_5" className="modal modal-middle sm:modal-middle">
+      <div className="modal-box">
         <div className="flex flex-col justify-center mt-0 modal-action">
           <form
             onSubmit={handleSubmit(onSubmit)}

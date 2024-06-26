@@ -3,6 +3,7 @@ import { FaFacebookF, FaGithub, FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Modal from "./Modal";
+import { AuthContext } from "../contexts/AuthProvider";
 // import { AuthContext } from "../contexts/AuthProvider";
 
 const Signup = () => {
@@ -12,29 +13,29 @@ const Signup = () => {
     formState: { errors },
   } = useForm();
 
-  //   const { createUser, login } = useContext(AuthContext);
+  const { createUser, login } = useContext(AuthContext);
   // redirecting to home page or specifig page
-  //   const location = useLocation();
-  //   const navigate = useNavigate();
-  //   const from = location.state?.from?.pathname || "/";
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/";
 
   const onSubmit = (data) => {
     const email = data.email;
     const password = data.password;
-    // createUser(email, password)
-    //   .then((result) => {
-    //     // Signed up
-    //     const user = result.user;
-    //     alert("Account creation successfully done!");
-    //     document.getElementById("my_modal_5").close();
-    //     navigate(from, { replace: true });
-    //     // ...
-    //   })
-    //   .catch((error) => {
-    //     const errorCode = error.code;
-    //     const errorMessage = error.message;
-    //     // ..
-    //   });
+    createUser(email, password)
+      .then((result) => {
+        // Signed up
+        const user = result.user;
+        alert("Account creation successfully done!");
+        document.getElementById("my_modal_5").close();
+        navigate(from, { replace: true });
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+      });
   };
   return (
     <div className="flex items-center justify-center w-full max-w-md mx-auto my-20 shadow bg-gray-50">
