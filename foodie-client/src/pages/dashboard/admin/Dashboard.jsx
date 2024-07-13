@@ -1,7 +1,7 @@
 import React from "react";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
-import useAuth from "../../../hooks/useAuth";
+import useAuth from "../../../hooks/UseAuth";
 import { FaBook, FaDollarSign, FaUsers } from "react-icons/fa";
 import {
   BarChart,

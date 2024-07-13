@@ -12,8 +12,8 @@ import {
   FaUsers,
 } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
-// import useAdmin from "../hooks/useAdmin";
-// import Login from "../components/Login";
+import useAdmin from "../hooks/useAdmin";
+import Login from "../components/Login";
 import useAuth from "../hooks/useAuth";
 
 const sharedMenu = (

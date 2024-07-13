@@ -1,35 +1,55 @@
 import React, { useContext } from "react";
-import { FaFacebookF, FaGithub, FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { FaFacebookF, FaGithub, FaGoogle, FaRegUser } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import Modal from "./Modal";
 import { AuthContext } from "../contexts/AuthProvider";
-// import { AuthContext } from "../contexts/AuthProvider";
+import axios from "axios";
+import Swal from "sweetalert2";
+import useAxiosPublic from "../hooks/useAxiosPublic";
 
 const Signup = () => {
+  const { signUpWithGmail, createUser, updateUserProfile } =
+    useContext(AuthContext);
+
+  const axiosPublic = useAxiosPublic();
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
+
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
-
-  const { createUser, login } = useContext(AuthContext);
-  // redirecting to home page or specifig page
-  const location = useLocation();
-  const navigate = useNavigate();
-  const from = location.state?.from?.pathname || "/";
 
   const onSubmit = (data) => {
     const email = data.email;
     const password = data.password;
+    // console.log(email, password)
     createUser(email, password)
       .then((result) => {
         // Signed up
         const user = result.user;
-        alert("Account creation successfully done!");
-        document.getElementById("my_modal_5").close();
-        navigate(from, { replace: true });
-        // ...
+        updateUserProfile(data.name, data.photoURL)
+          .then(() => {
+            const userInfo = {
+              name: data.name,
+              email: data.email,
+            };
+
+            axiosPublic.post("/users", userInfo).then((response) => {
+              console.log(response);
+              alert("Signin successful!");
+              navigate(from, { replace: true });
+            });
+          })
+          .catch((error) => {
+            const errorMessage = error.message;
+          });
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -37,15 +57,38 @@ const Signup = () => {
         // ..
       });
   };
+
+  // login with google
+  const handleRegister = () => {
+    signUpWithGmail().then((result) => {
+      console.log(result.user);
+      const userInfo = {
+        email: result.user?.email,
+        name: result.user?.displayName,
+      };
+      axiosPublic.post("/users", userInfo).then((res) => {
+        console.log(res.data);
+        navigate("/");
+      });
+    });
+  };
   return (
-    <div className="flex items-center justify-center w-full max-w-md mx-auto my-20 shadow bg-gray-50">
-      <div className="flex flex-col justify-center mt-0 modal-action">
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="card-body"
-          method="dialog"
-        >
-          <h3 className="text-lg font-bold">Create A Account!</h3>
+    <div className="flex items-center justify-center w-full max-w-md mx-auto my-20 bg-white shadow">
+      <div className="mb-5">
+        <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
+          <h3 className="text-lg font-bold">Please Create An Account!</h3>
+          {/* name */}
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Name</span>
+            </label>
+            <input
+              type="name"
+              placeholder="Your name"
+              className="input input-bordered"
+              {...register("name")}
+            />
+          </div>
 
           {/* email */}
           <div className="form-control">
@@ -55,7 +98,7 @@ const Signup = () => {
             <input
               type="email"
               placeholder="email"
-              className="text-white placeholder-white input input-bordered bg-green"
+              className="input input-bordered"
               {...register("email")}
             />
           </div>
@@ -68,48 +111,40 @@ const Signup = () => {
             <input
               type="password"
               placeholder="password"
-              className="text-white placeholder-white bg-green input input-bordered"
+              className="input input-bordered"
               {...register("password")}
             />
-            <label className="mt-1 label">
-              <a href="#" className="label-text-alt link link-hover">
+            <label className="label">
+              <a href="#" className="mt-2 label-text-alt link link-hover">
                 Forgot password?
               </a>
             </label>
           </div>
 
-          {/* error */}
+          {/* error message */}
+          <p>{errors.message}</p>
 
-          {/* login btn */}
+          {/* submit btn */}
           <div className="mt-6 form-control">
             <input
               type="submit"
-              value="Signup"
               className="text-white btn bg-green"
+              value="Sign up"
             />
           </div>
 
-          <p className="my-2 text-center">
-            Have an account?{" "}
-            <button
-              className="ml-1 underline text-red"
-              onClick={() => document.getElementById("my_modal_5").showModal()}
-            >
-              Login
-            </button>{" "}
-          </p>
-
-          <Link
-            to="/"
-            className="absolute btn btn-sm btn-circle btn-ghost right-2 top-2"
-          >
-            ✕
-          </Link>
+          <div className="my-2 text-center">
+            Have an account?
+            <Link to="/login">
+              <button className="ml-2 underline">Login here</button>
+            </Link>
+          </div>
         </form>
-
-        {/* social sign in */}
-        <div className="mb-5 space-x-3 text-center">
-          <button className="btn btn-circle hover:bg-green hover:text-white">
+        <div className="space-x-3 text-center">
+          <button
+            onClick={handleRegister}
+            className="btn btn-circle hover:bg-green hover:text-white"
+          >
             <FaGoogle />
           </button>
           <button className="btn btn-circle hover:bg-green hover:text-white">
@@ -120,7 +155,6 @@ const Signup = () => {
           </button>
         </div>
       </div>
-      <Modal />
     </div>
   );
 };
