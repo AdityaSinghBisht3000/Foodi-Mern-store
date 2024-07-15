@@ -1,7 +1,7 @@
 [
     {
         "_id": "642c155b2c4774f05c36eeaa",
-        "name": "Haddock",
+        "name": "dragon fruit",
         "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
         "image": "/images/recipes/img1.png",
         "category": "salad",
@@ -9,7 +9,7 @@
     },
     {
         "_id": "642c155b2c4774f05c36eeb9",
-        "name": "Haddock",
+        "name": "dragon fruit",
         "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
         "image": "/images/recipes/img2.png",
         "category": "drinks",
@@ -18,7 +18,7 @@
     {
         "_id": "642c155b2c4774f05c36ee7c",
         "name": "Escalope de Veau",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "recipe": "Roasted Sweet Potato (served pink) with gratin potato and a griottine cherry sauce",
         "image": "/images/recipes/img1.png",
         "category": "popular",
         "price": 14.5
@@ -26,39 +26,39 @@
     {
         "_id": "642c155b2c4774f05c36ee88",
         "name": "Escalope de Veau",
-        "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+        "recipe": "Pan roasted dragon fruit fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "/images/recipes/img1.png",
         "category": "dessert",
         "price": 12.5
     },
     {
         "_id": "642c155b2c4774f05c36ee7a",
-        "name": "Roast Duck Breast",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "name": "Roast Sweet Potato",
+        "recipe": "Roasted Sweet Potato (served pink) with gratin potato and a griottine cherry sauce",
         "image": "/images/recipes/img2.png",
         "category": "popular",
         "price": 14.5
     },
     {
         "_id": "642c155b2c4774f05c36ee74",
-        "name": "Roast Duck Breast",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "name": "Roast Sweet Potato",
+        "recipe": "Roasted Sweet Potato (served pink) with gratin potato and a griottine cherry sauce",
         "image": "/images/recipes/img3.png",
         "category": "popular",
         "price": 14.5
     },
     {
         "_id": "642c155b2c4774f05c36ee712",
-        "name": "Roast Duck Breast",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "name": "Roast Sweet Potato",
+        "recipe": "Roasted Sweet Potato (served pink) with gratin potato and a griottine cherry sauce",
         "image": "/images/recipes/img1.png",
         "category": "popular",
         "price": 14.5
     },
     {
         "_id": "642c155b2c4774f05c36ee7x",
-        "name": "Roast Duck Breast",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "name": "Roast Sweet Potato",
+        "recipe": "Roasted Sweet Potato (served pink) with gratin potato and a griottine cherry sauce",
         "image": "/images/recipes/img2.png",
         "category": "popular",
         "price": 14.5
@@ -66,7 +66,7 @@
     {
         "_id": "642c155b2c4774f05c36ee8c",
         "name": "Escalope de Veau",
-        "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+        "recipe": "Pan roasted dragon fruit fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "/images/recipes/img3.png",
         "category": "dessert",
         "price": 12.5
@@ -74,7 +74,7 @@
     {
         "_id": "642c155b2c4774f05c36ee94",
         "name": "Escalope de Veau",
-        "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+        "recipe": "Pan roasted dragon fruit fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "/images/recipes/img1.png",
         "category": "pizza",
         "price": 12.5
@@ -98,7 +98,7 @@
     {
         "_id": "642c155b2c4774f05c36eeaf",
         "name": "Escalope de Veau",
-        "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+        "recipe": "Pan roasted dragon fruit fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "/images/recipes/img1.png",
         "category": "soup",
         "price": 12.5
@@ -114,7 +114,7 @@
     {
         "_id": "642c155b2c4774f05c36ee8a",
         "name": "Escalope de Veau",
-        "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+        "recipe": "Pan roasted dragon fruit fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "/images/recipes/img3.png",
         "category": "dessert",
         "price": 12.5
@@ -137,8 +137,8 @@
     },
     {
         "_id": "642c155b2c4774f05c36ee84",
-        "name": "Roast Duck Breast",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "name": "Roast Sweet Potato",
+        "recipe": "Roasted Sweet Potato (served pink) with gratin potato and a griottine cherry sauce",
         "image": "/images/recipes/img3.png",
         "category": "dessert",
         "price": 14.5
@@ -178,7 +178,7 @@
     {
         "_id": "642c155b2c4774f05c36ee7f",
         "name": "Roasted Pork Belly",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "recipe": "Roasted Sweet Potato (served pink) with gratin potato and a griottine cherry sauce",
         "image": "/images/recipes/img2.png",
         "category": "popular",
         "price": 14.5
@@ -193,7 +193,7 @@
     },
     {
         "_id": "642c155b2c4774f05c36eeba",
-        "name": "Haddock",
+        "name": "dragon fruit",
         "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
         "image": "/images/recipes/img1.png",
         "category": "drinks",
@@ -201,8 +201,8 @@
     },
     {
         "_id": "642c155b2c4774f05c36ee80",
-        "name": "Roast Duck Breast",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "name": "Roast Sweet Potato",
+        "recipe": "Roasted Sweet Potato (served pink) with gratin potato and a griottine cherry sauce",
         "image": "/images/recipes/img2.png",
         "category": "offered",
         "price": 14.5
@@ -234,7 +234,7 @@
     {
         "_id": "642c155b2c4774f05c36ee8e",
         "name": "Escalope de Veau",
-        "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+        "recipe": "Pan roasted dragon fruit fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "/images/recipes/img3.png",
         "category": "dessert",
         "price": 12.5
@@ -250,7 +250,7 @@
     {
         "_id": "642c155b2c4774f05c36ee99",
         "name": "Goats Cheese Pizza",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "recipe": "Roasted Sweet Potato (served pink) with gratin potato and a griottine cherry sauce",
         "image": "/images/recipes/img1.png",
         "category": "pizza",
         "price": 14.5
@@ -273,7 +273,7 @@
     },
     {
         "_id": "642c155b2c4774f05c36eeb6",
-        "name": "Haddock",
+        "name": "dragon fruit",
         "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
         "image": "/images/recipes/img2.png",
         "category": "soup",
@@ -281,7 +281,7 @@
     },
     {
         "_id": "642c155b2c4774f05c36eeb8",
-        "name": "Haddock",
+        "name": "dragon fruit",
         "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
         "image": "/images/recipes/img3.png",
         "category": "soup",
@@ -290,7 +290,7 @@
     {
         "_id": "642c155b2c4774f05c36ee7e",
         "name": "Fish Parmentier",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "recipe": "Roasted Sweet Potato (served pink) with gratin potato and a griottine cherry sauce",
         "image": "/images/recipes/img1.png",
         "category": "popular",
         "price": 14.5
@@ -313,7 +313,7 @@
     },
     {
         "_id": "642c155b2c4774f05c36ee91",
-        "name": "Haddock",
+        "name": "dragon fruit",
         "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans",
         "image": "/images/recipes/img1.png",
         "category": "dessert",
@@ -321,7 +321,7 @@
     },
     {
         "_id": "642c155b2c4774f05c36ee97",
-        "name": "Haddock",
+        "name": "dragon fruit",
         "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
         "image": "/images/recipes/img2.png",
         "category": "pizza",
@@ -370,7 +370,7 @@
     {
         "_id": "642c155b2c4774f05c36ee9b",
         "name": "Goats Cheese Pizza",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "recipe": "Roasted Sweet Potato (served pink) with gratin potato and a griottine cherry sauce",
         "image": "/images/recipes/img1.png",
         "category": "pizza",
         "price": 14.5
@@ -394,7 +394,7 @@
     {
         "_id": "642c155b2c4774f05c36ee9d",
         "name": "Goats Cheese Pizza",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "recipe": "Roasted Sweet Potato (served pink) with gratin potato and a griottine cherry sauce",
         "image": "/images/recipes/img1.png",
         "category": "pizza",
         "price": 14.5
@@ -409,7 +409,7 @@
     },
     {
         "_id": "642c155b2c4774f05c36eeb4",
-        "name": "Haddock",
+        "name": "dragon fruit",
         "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
         "image": "/images/recipes/img1.png",
         "category": "soup",
@@ -426,7 +426,7 @@
     {
         "_id": "642c155b2c4774f05c36ee82",
         "name": "Escalope de Veau",
-        "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+        "recipe": "Pan roasted dragon fruit fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "/images/recipes/img1.png",
         "category": "offered",
         "price": 12.5
@@ -434,7 +434,7 @@
     {
         "_id": "642c155b2c4774f05c36ee86",
         "name": "Escalope de Veau",
-        "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+        "recipe": "Pan roasted dragon fruit fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "/images/recipes/img1.png",
         "category": "dessert",
         "price": 12.5
@@ -450,7 +450,7 @@
     {
         "_id": "642c155b2c4774f05c36eeab",
         "name": "Goats Cheese Pizza",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "recipe": "Roasted Sweet Potato (served pink) with gratin potato and a griottine cherry sauce",
         "image": "/images/recipes/img1.png",
         "category": "salad",
         "price": 14.5
@@ -465,8 +465,8 @@
     },
     {
         "_id": "642c155b2c4774f05c36eead",
-        "name": "Roast Duck Breast",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "name": "Roast Sweet Potato",
+        "recipe": "Roasted Sweet Potato (served pink) with gratin potato and a griottine cherry sauce",
         "image": "/images/recipes/img1.png",
         "category": "soup",
         "price": 14.5

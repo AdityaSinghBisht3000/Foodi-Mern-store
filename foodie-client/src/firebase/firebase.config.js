@@ -14,12 +14,12 @@ const firebaseConfig = {
 };
 
 // const firebaseConfig = {
-//   apiKey: "AIzaSyCkVKX2UzxWZun_ScxvuslyTxfsfRf5UNs",
-//   authDomain: "foodi-store-971e0.firebaseapp.com",
-//   projectId: "foodi-store-971e0",
-//   storageBucket: "foodi-store-971e0.appspot.com",
-//   messagingSenderId: "623121877043",
-//   appId: "1:623121877043:web:20e79028507b69f36f3b46",
+//   apiKey: "AIzaSyC8ienAzNABdEVzqffUQHSZGlJvqSavy9c",
+//   authDomain: "foodi-website-1ea9d.firebaseapp.com",
+//   projectId: "foodi-website-1ea9d",
+//   storageBucket: "foodi-website-1ea9d.appspot.com",
+//   messagingSenderId: "987920179190",
+//   appId: "1:987920179190:web:1da773126eb2938af0b1d7",
 // };
 
 // Initialize Firebase
