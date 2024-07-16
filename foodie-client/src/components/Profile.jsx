@@ -1,18 +1,24 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { AuthContext } from "../contexts/AuthProvider";
+import avatarImg from "/images/avatar.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Profile = ({ user }) => {
   const { logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  // logout
   const handleLogout = () => {
     logOut()
       .then(() => {
         // Sign-out successful.
-        alert("Log Out");
+        navigate("/");
       })
       .catch((error) => {
-        // An error happened.
+        console.log(error);
       });
   };
+
   return (
     <div>
       <div className="z-50 drawer drawer-end">
@@ -25,13 +31,15 @@ const Profile = ({ user }) => {
           >
             <div className="w-10 rounded-full">
               {user.photoURL ? (
-                <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
+                <img alt="" src={user.photoURL} />
               ) : (
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
+                <img alt="" src={avatarImg} />
               )}
+              {/* {user.photoURL ? (
+                <img alt="" src={URL.createObjectURL(file)} />
+              ) : (
+                <img alt="" src={avatarImg} />
+              )} */}
             </div>
           </label>
         </div>
@@ -50,10 +58,10 @@ const Profile = ({ user }) => {
               <a href="/order">Order</a>
             </li>
             <li>
-              <a href="/dashboard">Dashboard</a>
+              <a>Settings</a>
             </li>
             <li>
-              <a>Setting</a>
+              <a href="/dashboard">Dashboard</a>
             </li>
             <li>
               <a onClick={handleLogout}>Logout</a>

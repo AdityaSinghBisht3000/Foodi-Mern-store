@@ -1,97 +1,95 @@
 import React from "react";
 import bannerImg from "/images/home/banner.png";
+import { useTheme } from "../hooks/ThemeContext";
 
 const Banner = () => {
+  const { isDarkMode } = useTheme();
   return (
-    <div className="max-w-screen-2xl container mx-auto xl:px-24 bg-gradient-to-r from-0% from-[#FAFAFA] to-[#FCFCFC] to-100%">
-      <div className="flex flex-col items-center justify-between gap-8 py-24 md:flex-row-reverse">
+    <div className={`max-w-screen-2xl container mx-auto xl:px-24 bg-gradient-to-r from-0% from-[#FAFAFA] to-[#FCFCFC] to-100% ${isDarkMode ? 'dark' : ''}`}>
+      <div className={`py-24 flex flex-col md:flex-row-reverse items-center justify-between gap-8 ${isDarkMode ? 'text-white' : ''}`}>
+
         {/* img */}
         <div className="md:w-1/2">
           <img src={bannerImg} alt="" />
-          <div className="flex flex-col items-center justify-around gap-4 md:flex-row -mt-14">
-            <div className="flex items-center w-64 gap-3 px-3 py-2 bg-white shadow-sm rounded-2xl">
-              <img
-                src="/images/home/b-food1.png"
-                alt=""
-                className="rounded-2xl"
-              />
+          <div className="flex flex-col md:flex-row items-center justify-around -mt-14 gap-4">
+            <div className="bg-white px-3 py-2 rounded-2xl flex items-center gap-3 shadow-sm w-64">
+              <img src="/images/home/b-food1.png" alt=""  className="rounded-2xl"/>
               <div className="space-y-1">
                 <h5>Spicy noodles</h5>
                 <div className="rating rating-sm">
-                  <input
+              
+                <input
                     type="radio"
                     name="rating-6"
-                    className="bg-yellow-500 mask mask-star-2"
+                    className="mask mask-star-2 bg-orange-500"
+                    readOnly
+                  />
+                <input
+                    type="radio"
+                    name="rating-6"
+                    className="mask mask-star-2 bg-orange-500"
                     readOnly
                   />
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-yellow-500 mask mask-star-2"
-                    readOnly
-                  />
-                  <input
-                    type="radio"
-                    name="rating-6"
-                    className="bg-yellow-500 mask mask-star-2"
+                    className="mask mask-star-2 bg-orange-500"
                     checked
                     readOnly
                   />
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-yellow-400 mask mask-star-2"
+                    className="mask mask-star-2 bg-orange-400"
                   />
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-yellow-400 mask mask-star-2"
+                    className="mask mask-star-2 bg-orange-400"
                     readOnly
                   />
+                
                 </div>
                 <p className="text-red">$18.00</p>
               </div>
             </div>
-            <div className="items-center hidden w-64 gap-3 px-3 py-2 bg-white shadow-sm rounded-2xl md:flex">
-              <img
-                src="/images/home/b-food1.png"
-                alt=""
-                className="rounded-2xl"
-              />
+            <div className="bg-white px-3 py-2 rounded-2xl md:flex items-center gap-3 shadow-sm w-64 hidden">
+              <img src="/images/home/b-food1.png" alt=""  className="rounded-2xl"/>
               <div className="space-y-1">
                 <h5>Spicy noodles</h5>
                 <div className="rating rating-sm">
-                  <input
+                <input
                     type="radio"
                     name="rating-6"
-                    className="bg-yellow-500 mask mask-star-2"
+                    className="mask mask-star-2 bg-orange-500"
+                    readOnly
+                  />
+                <input
+                    type="radio"
+                    name="rating-6"
+                    className="mask mask-star-2 bg-orange-500"
                     readOnly
                   />
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-yellow-500 mask mask-star-2"
-                    readOnly
-                  />
-                  <input
-                    type="radio"
-                    name="rating-6"
-                    className="bg-yellow-500 mask mask-star-2"
+                    className="mask mask-star-2 bg-orange-500"
                     checked
                     readOnly
                   />
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-yellow-400 mask mask-star-2"
+                    className="mask mask-star-2 bg-orange-400"
                     readOnly
                   />
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-yellow-400 mask mask-star-2"
+                    className="mask mask-star-2 bg-orange-400"
                     readOnly
                   />
+                
                 </div>
                 <p className="text-red">$18.00</p>
               </div>
@@ -100,19 +98,19 @@ const Banner = () => {
         </div>
 
         {/* texts */}
-        <div className="px-4 md:w-1/2 space-y-7">
-          <h2 className="text-4xl font-bold leading-snug md:text-5xl md:leading-snug">
-            Dive into Delights Of Delectable{" "}
-            <span className="text-green">Food</span>
+        <div className="md:w-1/2 px-4 space-y-7">
+        <h2 className="md:text-5xl text-4xl font-bold md:leading-snug leading-snug">
+            Dive into Delights Of Delectable <span className="text-green">Food</span>
           </h2>
           <p className="text-[#4A4A4A] text-xl">
             Where Each Plate Weaves a Story of Culinary Mastery and Passionate
             Craftsmanship
           </p>
-          <button className="px-8 py-3 font-semibold text-white rounded-full bg-green btn">
+          <button className="bg-green font-semibold btn text-white px-8 py-3 rounded-full">
             Order Now
           </button>
         </div>
+        
       </div>
     </div>
   );
