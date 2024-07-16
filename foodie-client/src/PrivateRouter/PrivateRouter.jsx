@@ -1,19 +1,21 @@
+/* eslint-disable react/prop-types */
 import React, { useContext } from "react";
-import { AuthContext } from "../contexts/AuthProvider";
 import { Navigate, useLocation } from "react-router-dom";
-import LoadingSpinner from "../components/LoadingSpinner";
+import { AuthContext } from "../contexts/AuthProvider";
 
-const PrivateRouter = ({ children }) => {
+const PrivateRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
   const location = useLocation();
+
   if (loading) {
-    // return <p>Loading</p>;
-    return <LoadingSpinner />;
+    return <div>Loading...</div>;
   }
+
   if (user) {
-    return children;
+    return <>{children}</>;
   }
-  return <Navigate to="/signup" state={{ from: location }} replace></Navigate>;
+
+  return <Navigate to="/login" state={{ from: location }} replace />;
 };
 
-export default PrivateRouter;
+export default PrivateRoute;

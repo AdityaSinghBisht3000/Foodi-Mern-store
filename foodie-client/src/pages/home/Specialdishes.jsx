@@ -1,11 +1,11 @@
+/* eslint-disable react/prop-types */
 import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { FaHeart } from "react-icons/fa";
-import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
+import { FaHeart} from "react-icons/fa"
 import Cards from "../../components/Cards";
-// import "../../App.css";
+import { FaAngleRight, FaAngleLeft  } from "react-icons/fa6";
 
 const SampleNextArrow = (props) => {
   const { className, style, onClick } = props;
@@ -33,7 +33,7 @@ const SamplePrevArrow = (props) => {
   );
 };
 
-const Specialdishes = () => {
+const SpecialDishes = () => {
   const [recipes, setRecipes] = useState([]);
   const slider = React.useRef(null);
 
@@ -84,37 +84,32 @@ const Specialdishes = () => {
     prevArrow: <SamplePrevArrow />,
   };
   return (
-    <div className="container relative px-4 mx-auto my-20bg-gradient-to-r from-0% from-[#FAFAFA] to-[#FCFCFC] to-100% max-w-screen-2xl xl:px-24">
-      <div className="text-left">
-        <p className="subtitle">Standout Dishes</p>
-        <h2 className="title">From Our Menu</h2>
-      </div>
-      <div className="mb-10 md:absolute right-3 top-8 md:mr-24">
-        <button
-          onClick={() => slider?.current?.slickPrev()}
-          className="p-2 ml-5 rounded-full btn"
+    <div className="max-w-screen-2xl container mx-auto xl:px-24 px-4 my-20 relative">
+       <div className='text-left'>
+            <p className='subtitle'>Customer Favorites</p>
+            <h2 className='title'>Popular Catagories</h2>
+        </div>
+      <div className="md:absolute right-3 top-8 mb-10 md:mr-24">
+        <button onClick={() => slider?.current?.slickPrev()}
+        className=" btn p-2 rounded-full ml-5"
         >
-          <FaAngleLeft className="w-8 h-8 p-1 " />
+        <FaAngleLeft className=" h-8 w-8 p-1"/>
         </button>
         <button
-          className="p-2 ml-5 rounded-full bg-green btn"
+          className="bg-green btn p-2 rounded-full ml-5"
           onClick={() => slider?.current?.slickNext()}
         >
-          <FaAngleRight className="w-8 h-8 p-1 " />
+          <FaAngleRight className=" h-8 w-8 p-1"/>
         </button>
       </div>
 
-      <Slider
-        ref={slider}
-        {...settings}
-        className="mt-10 space-x-5 overflow-hidden"
-      >
+      <Slider ref={slider} {...settings} className="overflow-hidden mt-10 space-x-5">
         {recipes.map((item, i) => (
-          <Cards item={item} key={i} />
+          <Cards item={item} key={i}/>
         ))}
       </Slider>
     </div>
   );
 };
 
-export default Specialdishes;
+export default SpecialDishes;

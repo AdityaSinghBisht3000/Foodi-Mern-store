@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Cards from "../../components/Cards";
 import { FaFilter } from "react-icons/fa";
+import { useTheme } from "../../hooks/ThemeContext";
+import { Outlet } from "react-router-dom";
 
 const Menu = () => {
+  const { isDarkMode } = useTheme();
   const [menu, setMenu] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -14,7 +17,10 @@ const Menu = () => {
     // Fetch data from the backend
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/menu");
+        // const response = await fetch("https://foodi-server.onrender.com/menu");
+        const response = await fetch(
+          "https://foodi-website-sever.onrender.com/menu"
+        );
         const data = await response.json();
         setMenu(data);
         setFilteredItems(data); // Initially, display all items
@@ -25,6 +31,8 @@ const Menu = () => {
 
     fetchData();
   }, []);
+
+  // console.log(menu)
 
   const filterItems = (category) => {
     const filtered =
@@ -82,14 +90,18 @@ const Menu = () => {
   return (
     <div>
       {/* menu banner */}
-      <div className="max-w-screen-2xl container mx-auto xl:px-24 px-4 bg-gradient-to-r from-0% from-[#FAFAFA] to-[#FCFCFC] to-100%">
+      <div
+        className={`max-w-screen-2xl container mx-auto xl:px-24 px-4 bg-gradient-to-r from-0% from-[#FAFAFA] to-[#FCFCFC] to-100% ${
+          isDarkMode ? "dark" : ""
+        }`}
+      >
         <div className="flex flex-col items-center justify-center py-48">
           {/* content */}
           <div className="px-4 text-center space-y-7">
             <h2 className="text-4xl font-bold leading-snug md:text-5xl md:leading-snug">
               For the Love of Delicious <span className="text-green">Food</span>
             </h2>
-            <p className="text-[#4A4A4A] text-xl md:w-4/5 mx-auto">
+            <p className="text-[#4A4A4A]  text-xl md:w-4/5 mx-auto">
               Come with family & feel the joy of mouthwatering food such as
               Greek Salad, Lasagne, Butternut Pumpkin, Tokusen Wagyu, Olivas
               Rellenas and more for a moderate cost
@@ -146,14 +158,14 @@ const Menu = () => {
 
           {/* filter options */}
           <div className="flex justify-end mb-4 rounded-sm">
-            <div className="p-2 bg-green ">
+            <div className="p-2 bg-black ">
               <FaFilter className="w-4 h-4 text-white" />
             </div>
             <select
               id="sort"
               onChange={(e) => handleSortChange(e.target.value)}
               value={sortOption}
-              className="px-2 py-1 bg-white border-2 rounded-sm text-green"
+              className="px-2 py-1 text-white bg-black rounded-sm"
             >
               <option value="default"> Default</option>
               <option value="A-Z">A-Z</option>
@@ -166,14 +178,14 @@ const Menu = () => {
 
         {/* product card */}
         <div className="grid grid-cols-1 gap-4 md:grid-cols-4 sm:grid-cols-2 ">
-          {currentItems.map((item) => (
-            <Cards key={item._id} item={item} />
+          {currentItems.map((item, index) => (
+            <Cards key={index} item={item} />
           ))}
         </div>
       </div>
 
       {/* Pagination */}
-      <div className="flex justify-center my-8">
+      <div className="flex flex-wrap justify-center gap-2 my-8">
         {Array.from({
           length: Math.ceil(filteredItems.length / itemsPerPage),
         }).map((_, index) => (
@@ -182,12 +194,13 @@ const Menu = () => {
             onClick={() => paginate(index + 1)}
             className={`mx-1 px-3 py-1 rounded-full ${
               currentPage === index + 1 ? "bg-green text-white" : "bg-gray-200"
-            }`}
+            }  ${isDarkMode ? "dark border" : ""}`}
           >
             {index + 1}
           </button>
         ))}
       </div>
+      <Outlet />
     </div>
   );
 };
